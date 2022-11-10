@@ -2,17 +2,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MovieCard from "../MovieCard";
-import "./MovieList.css";
+import useStyles from "./MovieList.jss";
 
-function MovieList({ data }) {
+function MovieList({ movies }) {
+  const classes = useStyles();
   return (
-    <div className="cardContainer">
-      {data.map((item) => (
-        <Link to="/movie" state={{ id: item.id }} key={item.id}>
+    <div className={classes.cardContainer}>
+      {movies?.map((movie) => (
+        <Link to="/movie" state={{ id: movie.id }} key={movie.id}>
           <MovieCard
-            title={item.title}
-            actors={item.actors}
-            posterUrl={item.posterUrl}
+            title={movie.title}
+            actors={movie.actors}
+            posterUrl={movie.posterUrl}
           />
         </Link>
       ))}
