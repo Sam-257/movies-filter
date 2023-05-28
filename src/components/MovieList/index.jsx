@@ -7,10 +7,16 @@ import useStyles from "./MovieList.jss";
 function MovieList({ movies }) {
   const classes = useStyles();
   return (
-    <div className={classes.cardContainer}>
+    <div data-testid="cards-container" className={classes.cardContainer}>
       {movies?.map((movie) => (
-        <Link to="/movie" state={{ id: movie.id }} key={movie.id}>
+        <Link
+          to="/movie"
+          data-testid="movie-page-redirect"
+          state={{ id: movie.id }}
+          key={movie.id}
+        >
           <MovieCard
+            id={movie.id}
             title={movie.title}
             actors={movie.actors}
             posterUrl={movie.posterUrl}

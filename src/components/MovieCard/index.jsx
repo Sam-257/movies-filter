@@ -3,16 +3,21 @@ import React from "react";
 import "./MovieCard.css";
 import useStyles from "./MovieCard.jss";
 
-function MovieCard({ title, actors, posterUrl }) {
+function MovieCard({ id, title, actors, posterUrl }) {
   const classes = useStyles();
   return (
     <div className={classes.card}>
-      <img className={classes.img} src={posterUrl} alt="banner" />
+      <img
+        className={classes.img}
+        src={posterUrl}
+        alt="banner"
+        data-testid={`poster-${id}`}
+      />
       <div className={classes.container}>
         <h4>
-          <b>{title}</b>
+          <b data-testid={`title-${id}`}>{title}</b>
         </h4>
-        <p>{actors}</p>
+        <p data-testid={`actors-${id}`}>{actors}</p>
       </div>
     </div>
   );
