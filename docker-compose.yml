@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      PMA_ARBITARY: 1
+    ports:
+      - "8080:80"
