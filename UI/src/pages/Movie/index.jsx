@@ -9,12 +9,12 @@ function Movie() {
   const { state } = useLocation();
   const [movie, setMovie] = useState({});
   const { data } = useQuery("movies-list", () => {
-    return axios.get("http://localhost:8080/movies");
+    return axios.get(`http://localhost:8080/movies/${state.id}`);
   });
 
   useEffect(() => {
     if (!data) return;
-    setMovie(data.data.filter((item) => item.id === state.id)[0]);
+    setMovie(data.data.data[0]);
   }, [data, state.id]);
   return (
     <>

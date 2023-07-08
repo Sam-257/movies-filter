@@ -18,6 +18,9 @@
   
   <summary>Server</summary>
 
+  * You can run the server on two environments using `npm run dev` and `npm run prod`.
+  * By default, the server runs at port `8080`. To run it on a different port use the command `SERVER_PORT=8083 npm run prod`.
+
   </details>
 
   <details>
@@ -62,8 +65,8 @@
 
   | Command | Description |
   | --- | --- |
-  | `docker run -p 8080:80 phpmyadmin` | `-p` -> port, map port `8080` of our system to port `80` of the container. |
-  | `-e PMA_ARBITARY=1` | Adding `PMA_ARBITARY=1` is for the phpMyAdmin to. not make any asumptions about where the sql server is running |
+  | `docker run -p 8081:80 phpmyadmin` | `-p` -> port, map port `8081` of our system to port `80` of the container. |
+  | `-e PMA_ARBITRARY=1` | Adding `PMA_ARBITRARY=1` is for the phpMyAdmin to. not make any asumptions about where the sql server is running |
 
   </details>
   

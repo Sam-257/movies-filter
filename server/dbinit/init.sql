@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS moviesdb;
+
+USE moviesdb;
+
+DROP TABLE IF EXISTS movies;
+
+CREATE TABLE movies (
+  id         BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  title      VARCHAR(255) NOT NULL,
+  year       YEAR NOT NULL,
+  runtime    BIGINT NOT NULL,
+  genres     JSON NOT NULL,
+  director   VARCHAR(255) NOT NULL,
+  actors     VARCHAR(255) NOT NULL,
+  plot       TEXT NOT NULL,
+  posterUrl  TEXT NOT NULL,
+  createdAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);

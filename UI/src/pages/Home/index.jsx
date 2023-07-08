@@ -15,7 +15,7 @@ function Home() {
   useEffect(() => {
     if (!data) return;
     setFilteredList(
-      data.data.filter((item) =>
+      data.data.data.filter((item) =>
         item.title.toLowerCase().includes(searchInput.toLowerCase())
       )
     );
