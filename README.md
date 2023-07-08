@@ -6,12 +6,11 @@
     
   <summary> UI </summary>
   
-  UI is a cra. Run the application using `npm run start`. 
-  Assuming everything goes well, your browser will be pointed to 
-  * http://localhost:3000
-  UI has a json-server dependency which will start using the command `npm run json-server`
-  The json-server will run at 
-  * http://localhost:8080
+  * UI is a cra. Run the application using `npm run start`. 
+  Assuming everything goes well, your browser will be pointed to http://localhost:3000
+  * UI has a json-server dependency which will start using the command `npm run json-server`.
+  The json-server will run at http://localhost:8080
+  * Once the backend server is up, you'll have to run the backend server instead of the json-server.
   
   </details>
 
